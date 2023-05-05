@@ -1,19 +1,9 @@
-<!-- **Milestone 1**
-Creare un form che invii in GET la lunghezza della password. 
-Una nostra funzione utilizzerà questo dato per generare una password casuale (composta da lettere, lettere maiuscole, numeri e simboli) da restituire all’utente.
-Scriviamo tutto (logica e layout) in un unico file *index.php* -->
 
 <?php
 
-// logica 
 
-$length = intval($_GET['length']);
+include __DIR__ . '/functions.php';
 
-function password_generate($chars) {
-    $data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz';
-    return substr(str_shuffle($data), 0, $chars);
-}
-echo password_generate($length);
 
 ?>
 
