@@ -1,9 +1,15 @@
 
 <?php
 
-
 include __DIR__ . '/functions.php';
 
+session_start();
+
+$_SESSION['password'] = password_generate($length);
+
+if(password_generate($length)) {
+    header('Location: user_password.php');
+}
 
 ?>
 
